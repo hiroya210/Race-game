@@ -123,7 +123,7 @@ body{
 
 .start:hover{
     cursor: pointer;
-    background-color: rgb(255, 232, 232);
+    background-color: rgb(254, 232, 232);
     color: brown;
 }
 .start.none{
