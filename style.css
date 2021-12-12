@@ -75,7 +75,7 @@ body{
 .winner{
     position: absolute;
     text-align: center;
-    left: 430px;
+    left: 518px;
     font-size: 48px;
     width: 400px;
     color: rgb(255, 72, 72);
@@ -109,7 +109,7 @@ body{
     position: absolute;
     text-align: center;
     top: 200px;
-    left: 405px;
+    left: 500px;
     font-size: 48px;
     width: 400px;
     color: rgb(255, 232, 232);

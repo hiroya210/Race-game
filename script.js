@@ -112,7 +112,7 @@ const runGame = () => {
                     player1.setAttribute("style", `left: ${speed1}px`);
                     clearInterval(heating)
                 }
-                }, 500);
+                }, 250);
             }
         }
     
@@ -166,7 +166,7 @@ const runGame = () => {
                     player2.setAttribute("style", `left: ${speed2}px`);
                     clearInterval(heating)
                 }
-                }, 500);
+                }, 250);
             }
         }
     
