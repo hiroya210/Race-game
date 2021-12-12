@@ -1,0 +1,145 @@
+
+body{
+    background-color: rgb(92, 92, 92);
+    border: 2px solid black;
+    margin: 64px;
+}
+
+.container{
+    background-image: url("images/nightSky.jpg.png");
+    background-size: contain;
+    display: flex;
+    position: relative;
+    padding-top: 100px;
+    height: 450px;
+    margin-left: 0;
+    margin: auto 0;
+    align-items: flex-end;
+}
+
+#building{
+    top: 182px;
+    height: 196px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    background-position: 0px;
+    background-image: url("/images/buildings3.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+
+#building.active{
+    animation: moveBG 6s linear infinite;
+}
+@keyframes moveBG {
+    0%{background-position: 0 0;}
+    100%{background-position: -1420px 0;}
+  }
+
+
+#road{
+    height: 175px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    background-image: url("/images/real_road.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+
+#road.active{
+     animation: move 0.9s linear infinite;
+}
+@keyframes move {
+  100%{background-position: 0 0;}
+  0%{background-position: 100vw 0;}
+}
+
+#finish{
+    opacity: 0.9;
+    position: absolute;
+    right: -400px;
+}
+
+@keyframes moveFinish {
+    100%{ transform: translateX(-200vw);}
+}
+
+#finish.active{
+    animation: moveFinish 2s linear;
+}
+
+.winner{
+    position: absolute;
+    text-align: center;
+    left: 430px;
+    font-size: 48px;
+    width: 400px;
+    color: rgb(255, 72, 72);
+    border: 3px solid rgb(204, 28, 28);
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* display: none; */
+}
+
+@keyframes showUp {
+    100%{transform: translateY(-350px);}
+    0%{transform: translateY(-350px);}
+}
+
+.winner.active {
+    animation: showUp 3s linear infinite;
+}
+
+.winner.active2 {
+    color: rgb(252, 255, 72);
+    border: 3px solid rgb(204, 201, 28);
+    animation: showUp 3s linear infinite;
+}
+
+.start{
+    box-shadow: 5px 16px 10px black;
+    background-color: brown;
+    z-index: 10;
+    position: absolute;
+    text-align: center;
+    top: 200px;
+    left: 405px;
+    font-size: 48px;
+    width: 400px;
+    color: rgb(255, 232, 232);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    margin: 0;
+    padding: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3s;
+}
+
+.start:hover{
+    cursor: pointer;
+    background-color: rgb(255, 232, 232);
+    color: brown;
+}
+.start.none{
+    display: none;
+}
+.controls{
+    color: #ffebcd;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 10px;
+}
+
+.controls li{
+    list-style: none;
+}

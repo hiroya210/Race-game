@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="player1.css">
+    <link rel="stylesheet" href="player2.css">
+    <title>My Wagon Race</title>
+</head>
+<body>
+    <div class="container">
+        <div class="overheat hide" >
+            <p>Overheat!</p>
+        </div>
+        <p id="player1-tag">PLAYER 1</p>
+        <div class="playerBar1">
+            <progress id="current-speed" value="100" max="600" ></progress>
+            <progress id="engine" value="0" max="10"></progress>
+        </div>
+        <div class="overheat2 hide" >
+            <p>Overheat!</p>
+        </div>
+        <p id="player2-tag">PLAYER 2</p>
+        <div class="playerBar2">
+            <progress id="current-speed2" value="100" max="600" ></progress>
+            <progress id="engine2" value="0" max="10"></progress>
+        </div>
+        <div class="start">PLAY GAME</div>
+        <div class="winner">PLAYER 1 WON!</div>
+        <div id="building"></div>
+        <div id="road">
+            <img src="/images/finish.png" alt="" id="finish">
+        </div>
+        <div id="player1">
+            <img src="images/player1.png"  id="car1" alt="">
+            <img src="images/wheel1.png" id="wheel1-back" class="wheel1"alt="">
+            <img src="images/wheel1.png" id="wheel1-front" class="wheel1" alt="">
+        </div>
+
+        <div id="player2"> 
+            <img src="images/player2.png" id="car2" alt="">
+            <img src="images/wheel2.png" id="wheel2-back" class="wheel2" alt="">
+            <img src="images/wheel2.png" id="wheel2-front" class="wheel2" alt="">
+        </div>  
+    </div>
+    <div class = "controls">
+        Controls
+        <br>
+        
+        <div>   
+           
+        <ul> 
+            Player 1:
+            <li>Q = Speed Up</li>
+            <li>W = Speed Down</li>
+        </ul>
+        </div>  
+        <br>
+        <div>
+            
+        <ul>
+            Player 2:
+            <li>O = Speed Up</li>
+            <li>P = Speed Down</li>
+        </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

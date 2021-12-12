@@ -1,0 +1,96 @@
+div#player2{
+    position: absolute;
+    left: 100px;
+    bottom: -145px;
+    transition: 2s;
+}
+
+
+#car2{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: -299px;
+    left: 2px;
+}
+
+#car2.active{
+    animation: steer 0.3s linear infinite;
+}
+
+@keyframes steer {
+    100%{transform: translateY(-1px); }
+    50%{ transform: translateY(0px);}
+    0% {transform: translateY(-1px); }
+    
+}
+#wheel2-front, #wheel2-back{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 180px;
+}
+
+.wheel2.active{
+    animation: wheel 0.23s linear infinite
+}
+
+#wheel2-back{
+    left: 19px;
+}
+
+#wheel2-front{
+    left: 130px;
+}
+
+@keyframes wheel {
+    100%{transform: rotate(360deg);}
+}
+.playerBar2{
+    position: absolute;
+    top: 0;
+    right: 152px;
+}
+
+progress#engine2 {
+    position: absolute;
+    top: 25px;
+    border: none;
+    width: 150px;
+    height: 20px;
+    background: rgb(182, 16, 16);
+}
+
+progress#engine2::-webkit-progress-value {
+    background: rgb(212, 22, 22);
+}
+
+.overheat2{
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: red;
+    font-size: 19px;
+    font-family: fantasy;
+    animation: warn 0.9s linear infinite;
+}
+
+.overheat2.hide{
+     display: none;
+}
+
+@keyframes warn {
+    0%{opacity: 1;}
+    100%{opacity: 0.5;}
+    
+}
+
+p#player1-tag{
+    font-family: fantasy;
+    position: absolute;
+    top: -55px;
+    z-index: 3;
+    font-size: 24px;
+    left: 35px;
+    color: wheat;
+}
