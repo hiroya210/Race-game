@@ -82,7 +82,7 @@ const runGame = () => {
     document.addEventListener("keyup", (event) => {
     
         // Player 1
-    if ((event.code === "KeyW") && (canSpeedUp1)){
+    if ((event.code === "KeyQ") && (canSpeedUp1)){
         speed1 += 100
 
         if (speed1 >= 600){ 
@@ -119,7 +119,7 @@ const runGame = () => {
         player1.setAttribute("style", `left: ${speed1}px`);
         progressBar.value = speed1
     }
-    if ((event.code === "KeyE") && (canSpeedDown1)){
+    if ((event.code === "KeyW") && (canSpeedDown1)){
         speed1 -= 100
         canSpeedUp1 = true
         overHeating1 = false
@@ -135,7 +135,7 @@ const runGame = () => {
 
 
     // Player 2
-    if ((event.code === "KeyP") && (canSpeedUp2)){
+    if ((event.code === "KeyO") && (canSpeedUp2)){
         speed2 += 100
 
         if (speed2 >= 600){ 
@@ -173,7 +173,7 @@ const runGame = () => {
         player2.setAttribute("style", `left: ${speed2}px`);
         progressBar2.value = speed2
     }
-    if ((event.code === "KeyO") && (canSpeedDown2)){
+    if ((event.code === "KeyP") && (canSpeedDown2)){
         speed2 -= 100
         canSpeedUp2 = true
         overHeating2 = false
