@@ -82,7 +82,7 @@ const runGame = () => {
     document.addEventListener("keyup", (event) => {
     
         // Player 1
-    if ((event.code === "KeyW") && (canSpeedUp1)){
+    if ((event.code === "KeyQ") && (canSpeedUp1)){
         speed1 += 100
 
         if (speed1 >= 600){ 
@@ -119,7 +119,7 @@ const runGame = () => {
         player1.setAttribute("style", `left: ${speed1}px`);
         progressBar.value = speed1
     }
-    if ((event.code === "KeyE") && (canSpeedDown1)){
+    if ((event.code === "KeyW") && (canSpeedDown1)){
         speed1 -= 100
         canSpeedUp1 = true
         overHeating1 = false
