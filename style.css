@@ -24,7 +24,7 @@ body{
     position: absolute;
     display: block;
     background-position: 0px;
-    background-image: url("/images/buildings3.png");
+    background-image: url("images/buildings3.png");
     background-size: cover;
     background-repeat: repeat-x;
     overflow: hidden;
@@ -44,7 +44,7 @@ body{
     width: 100%;
     position: absolute;
     display: block;
-    background-image: url("/images/real_road.png");
+    background-image: url("images/real_road.png");
     background-size: cover;
     background-repeat: repeat-x;
     overflow: hidden;
