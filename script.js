@@ -73,7 +73,7 @@ const runGame = () => {
         wheel2.forEach((w)=>{ w.classList.toggle("active")})
         setTimeout(() => { 
             finish.classList.add("active")
-        }, 30000)
+        }, 15000)
     }
     else {
         location.reload()
