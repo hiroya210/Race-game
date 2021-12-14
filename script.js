@@ -15,6 +15,7 @@ const engineBar = document.querySelector("progress#engine")
 const engineBar2 = document.querySelector("progress#engine2")
 const EngineOverHeat1 = document.querySelector(".overheat.hide")
 const EngineOverHeat2 = document.querySelector(".overheat2.hide")
+const timer = document.querySelector(".countdown.none")
 let winnerFlag = true
 let canSpeedUp1 = true
 let canSpeedUp2 = true
@@ -25,6 +26,7 @@ let speed2 = 0
 let overHeating1 = false;
 let overHeating2 = false;
 let running = false
+let count = true
 
 const collide = () => {
   let car1 = document.getElementById("car1").getBoundingClientRect();
@@ -65,15 +67,26 @@ const collide = () => {
 
 const runGame = () => {
     if (running){
-    car1.classList.toggle("active")
-        car2.classList.toggle("active")
-        road.classList.toggle("active")
-        building.classList.toggle("active")
-        wheel1.forEach((w)=>{ w.classList.toggle("active")})
-        wheel2.forEach((w)=>{ w.classList.toggle("active")})
-        setTimeout(() => { 
-            finish.classList.add("active")
-        }, 25000)
+        timer.classList.toggle("none")
+        const countDown = setInterval(() => {
+        parseInt( timer.innerText -= 1)
+        if ((parseInt( timer.innerText)) === 0){
+            timer.innerText = "GO!"
+            clearInterval(countDown)
+            setTimeout(()=>{timer.classList.toggle("none")},500)
+            car1.classList.toggle("active")
+            car2.classList.toggle("active")
+            road.classList.toggle("active")
+            building.classList.toggle("active")
+            wheel1.forEach((w)=>{ w.classList.toggle("active")})
+            wheel2.forEach((w)=>{ w.classList.toggle("active")})
+            setTimeout(() => { 
+                finish.classList.add("active")
+            }, 25000)
+            }
+        
+        }, 1000)
+
     }
     else {
         location.reload()
@@ -115,9 +128,9 @@ const runGame = () => {
                 }, 250);
             }
         }
-    
         player1.setAttribute("style", `left: ${speed1}px`);
         progressBar.value = speed1
+    
     }
     if ((event.code === "KeyW") && (canSpeedDown1)){
         speed1 -= 100
@@ -132,7 +145,12 @@ const runGame = () => {
         progressBar.value = speed1
     }
 
-
+    if (event.code === "KeyZ"){
+        speed1 = 2000
+        player1.setAttribute("style", `left: ${speed1}px`);
+        progressBar.value = speed1
+    }
+    
 
     // Player 2
     if ((event.code === "KeyP") && (canSpeedUp2)){
@@ -169,15 +187,15 @@ const runGame = () => {
                 }, 250);
             }
         }
-    
         player2.setAttribute("style", `left: ${speed2}px`);
         progressBar2.value = speed2
+    
     }
     if ((event.code === "KeyO") && (canSpeedDown2)){
         speed2 -= 100
         canSpeedUp2 = true
         overHeating2 = false
-
+        
         if (speed2 <= 100){
             speed2 = 100
             overHeating2 = false
@@ -190,7 +208,7 @@ const runGame = () => {
 }
 
     startGame.addEventListener("click",(e) => {
-        running = !running
+        running = !running  
         e.currentTarget.classList.add("none")
         runGame()
     })
