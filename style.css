@@ -136,9 +136,10 @@ body{
     left: 545px;
     font-size: 120px;
     z-index: 12;
-    font-family: fantasy;
-    color: rgb(185, 44, 44);
-    text-shadow: 1px 1px 1px black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgb(255, 234, 223);
+    text-shadow: 2px 2px 2px black;
 }
 
 .countdown.none{
