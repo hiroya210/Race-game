@@ -146,9 +146,14 @@ const runGame = () => {
     }
 
     if (event.code === "KeyZ"){
-        speed1 = 2000
+        speed1 = 5000
+        engineBar.value = 10
         player1.setAttribute("style", `left: ${speed1}px`);
         progressBar.value = speed1
+        setTimeout(()=>{
+            player1.setAttribute("style", `overflow: hidden`);
+        },400)
+
     }
     
 
